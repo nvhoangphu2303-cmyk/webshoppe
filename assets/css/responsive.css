@@ -41,6 +41,9 @@
         --header-height: 75px;
         --navbar-height: 0;
     }
+    .nav__bars-btn {
+        display: block;
+    }
 }
 
 /* Tablet */

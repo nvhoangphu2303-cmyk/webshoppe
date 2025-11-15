@@ -482,6 +482,81 @@
 .auth-form__help-forgot{
     color: var(--primary-color);
 }
+/* Mobile Nav */
+.nav__bar{
+    display: flex;
+    padding: 0 12px;
+}
+.nav__bars-btn{
+    width: 28px;
+    height: 28px;
+    display: none;
+}
+.nav__bars-btn-icon{
+    font-size: 2.6rem;
+    color: var(--white-color);
+}
+.nav__overlay{
+    position: fixed;
+    top: 0 ;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeIn linear 0.3s;
+    z-index: 10;
+
+}
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0 ;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform linear 0.2s, opacity linear 0.2s;
+    z-index: 1000;
+
+}
+.nav__mobile-list{
+    margin-top: 24px;
+}
+
+.nav__mobile-link{
+    display: block;
+    padding: 8px 0 ;
+    font-size: 1,4rem;
+}
+
+.nav__mobile-clone{
+    font-size: 2.6rem;
+    width: 28px;
+    height: 28px;
+    color: #666;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.nav__input:checked ~ .nav__overlay {
+    display: block;
+}
+.nav__input:checked ~ .nav__mobile {
+    transform: translateX(0%);
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
 /* Header with search */
 .header-with-search{
@@ -491,7 +566,7 @@
 }
 
 .header__mobile-search{
-    padding: 0 12px;
+    padding-left: 12px;
     display: none;
 }
 
